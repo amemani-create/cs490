@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    Post-Update
+{% endblock %}
+{% block content %}
+<h1>Update Post</h1>
+    {% if user.is_authenticated %}
+<div class ="form-group">
+    <table>
+        <form method="POST">
+        {% csrf_token %}
+        {{ form.as_table }}
+            <button class="btn btn-secondary">Post</button>
+        </form>
+
+    </table>
+    </div>
+<hr>
+<br/>
+        {% else %}
+        You must Register to Update a Post!
+    {% endif %}
+<a href="{% url 'post_list' %}">Back</a>
+{% endblock %}
