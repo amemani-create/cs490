@@ -123,5 +123,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_URL = 'templates/account/registration/login'
 LOGIN_REDIRECT_URL = 'post_list'
 LOGOUT_REDIRECT_URL = 'home'
